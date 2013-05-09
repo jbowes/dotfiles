@@ -3,6 +3,9 @@
     email = jbowes@repl.ca
     user = jbowes
 
+[core]
+    commentchar = %
+
 [alias]
     ci = commit -a
     co = checkout
