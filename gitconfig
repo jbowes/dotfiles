@@ -19,7 +19,7 @@
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     
     # branches that are merged locally already, note this includes master itself
-    lurkers = !git branch --merged master | grep -v '^\\* master$'
+    lurkers = !git branch --merged master | grep -v '^. master$'
     klurkers = !git lurkers | xargs -n1 git br -d
 
 [apply]
