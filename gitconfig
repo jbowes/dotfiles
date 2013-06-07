@@ -17,23 +17,10 @@
     ds = diff --stat
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-
+    
     # branches that are merged locally already, note this includes master itself
-    lurkers = branch --merged master 
-
-    # as per https://twitter.com/jrbowes/status/304942580133679105
-    # delete all local branches that have been merged into master
-    #
-    # note, "git branch --merged master" will helpfully include master itself
-    # as a branch that has been fully merged to master. Gee, thanks git.
-    #
-    #  So for sanity, filter out current branch and anything named master
-    #
-    # Also note -d won't delete branches that aren't merged to their tracking
-    # branch. Use -D if you dont care.
-    #
-    #  See also 'git remote prune
-    purge = !"git branch -d $(git branch --merged master | grep -v -e '*' -e 'master')"
+    lurkers = !git branch --merged master | grep -v '^\\* master$'
+    klurkers = !git lurkers | xargs -n1 git br -d
 
 [apply]
     whitespace = warn
