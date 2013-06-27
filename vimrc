@@ -107,7 +107,7 @@ set list
 set listchars=tab:,.,trail:.,extends:#,nbsp:.
 set nowrap
 " strip trailing whitespace from files on save
-autocmd FileType c,cpp,java,javascript,python,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+autocmd FileType * autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 function! StripTrailingWhitespace()
   " Preparation: save last search, and cursor position.
   let _s=@/
