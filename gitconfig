@@ -17,16 +17,19 @@
     ds = diff --stat
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    
-    # branches that are merged locally already, note this includes master itself
+
+    # Aliases to display and remove branches that have already been merged
     lurkers = !git branch --merged master | grep -v '^. master$'
     klurkers = !git lurkers | xargs -n1 git br -d
+
+    rlurkers = !git branch -r --merged master | grep -v 'origin/master$'
+    krlurkers = !git rlurkers | sed "s.origin/.:." | git push origin
 
 [apply]
     whitespace = warn
 
 [diff]
-    rename = copy 
+    rename = copy
     renamelimit = 600
 
 [color]
