@@ -46,6 +46,7 @@ Bundle 'neocomplcache'
 Bundle 'Tagbar'
 Bundle 'altercation/vim-colors-solarized'
 
+
 filetype plugin indent on     " required!
 "
 " Brief help

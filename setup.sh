@@ -8,3 +8,5 @@ ln -s ~/code/dotfiles/bash_profile ~/.bash_profile
 ln -s ~/code/dotfiles/tigrc ~/.tigrc
 ln -s ~/code/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/code/dotfiles/vimrc ~/.vimrc
+
+ln -s ~/code/dotfiles/ftplugin ~/.vim/ftplugin

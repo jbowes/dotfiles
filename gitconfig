@@ -23,7 +23,7 @@
     klurkers = !git lurkers | xargs -n1 git br -d
 
     rlurkers = !git branch -r --merged master | grep -v 'origin/master$'
-    krlurkers = !git rlurkers | sed "s.origin/.:." | git push origin
+    krlurkers = !git rlurkers | sed "s.origin/.:." | xargs -n1 git push origin
 
 [apply]
     whitespace = warn
@@ -34,3 +34,5 @@
 
 [color]
     ui = true
+[push]
+	default = simple
