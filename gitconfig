@@ -25,6 +25,8 @@
     rlurkers = !git branch -r --merged master | grep -v 'origin/master$'
     krlurkers = !git rlurkers | sed "s.origin/.:." | xargs -n1 git push origin
 
+    rpo = remote prune origin
+
 [apply]
     whitespace = warn
 
