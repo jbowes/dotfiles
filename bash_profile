@@ -1,14 +1,4 @@
-# .bash_profile
+[ -f ~/.bashrc ] && . .bashrc
 
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
-
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-export PATH
-
-export GOPATH=$HOME/.gocode
+[[ -s /Users/jbowes/.nvm/nvm.sh ]] && . /Users/jbowes/.nvm/nvm.sh # This loads NVM
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
