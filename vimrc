@@ -93,6 +93,9 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 vnoremap < <gv
 vnoremap > >gv
 
+" allow backspacing past start of insert, indents, and newlines
+set backspace=indent,eol,start
+
 " vim powerline stuff
 set laststatus=2
 " don't use the custom characters that require font patching
