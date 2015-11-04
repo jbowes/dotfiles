@@ -34,7 +34,7 @@ Bundle 'node.js'
 Bundle "pangloss/vim-javascript"
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jeetsukumaran/vim-buffergator'
 "Bundle 'AutoClose'
@@ -45,7 +45,8 @@ Bundle 'tpope/vim-repeat'
 Bundle 'neocomplcache'
 Bundle 'Tagbar'
 Bundle 'altercation/vim-colors-solarized'
-
+Plugin 'fatih/vim-go'
+Plugin 'elzr/vim-json'
 
 filetype plugin indent on     " required!
 "
@@ -191,17 +192,17 @@ map <leader>r :CtrlP<CR>
       autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
       autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
       autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-      autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+      " autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
       autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
       autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
       " Enable heavy omni completion.
-      if !exists('g:neocomplcache_omni_patterns')
-          let g:neocomplcache_omni_patterns = {}
-      endif
-      let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-      let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-      let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-      let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-      let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
+      " if !exists('g:neocomplcache_omni_patterns')
+      "    let g:neocomplcache_omni_patterns = {}
+      " endif
+      " let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+      " let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+      " let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+      " let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+      " let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
   " }
