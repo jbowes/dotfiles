@@ -9,11 +9,12 @@
 " \l toggle line numbers
 " \q turn off the highlighted search
 
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 
 if $TERM == "xterm-256color" || $TERM == "screen-256color" ||
-   \ $COLORTERM == "gnome-terminal"
+   \ $TERM == "screen" || $COLORTERM == "gnome-terminal"
   set t_Co=256
 endif
 
@@ -47,6 +48,9 @@ Bundle 'Tagbar'
 Bundle 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'elzr/vim-json'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'hashivim/vim-terraform'
 
 filetype plugin indent on     " required!
 "
@@ -67,6 +71,8 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1 " makes the background not change color
 set background=dark
 colorscheme solarized
+
+autocmd BufWritePre *.tf call terraform#fmt()
 
 set mouse=a
 set hlsearch
@@ -111,9 +117,16 @@ let g:syntastic_enable_signs=1
 set list
 set listchars=tab:,.,trail:.,extends:#,nbsp:.
 set nowrap
+
 " strip trailing whitespace from files on save
+" Ignore the quickfix window
+autocmd FileType qf let b:noStripWhitespace=1
 autocmd FileType * autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 function! StripTrailingWhitespace()
+  if exists('b:noStripWhitespace')
+    return
+  endif
+
   " Preparation: save last search, and cursor position.
   let _s=@/
   let l = line(".")

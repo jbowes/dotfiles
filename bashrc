@@ -12,7 +12,7 @@ export CLICOLOR=1
 #fedora like bash prompt
 PS1='[\u@\h \W]\$ '
 
-export EDITOR=vim
+export EDITOR=nvim
 export PATH=~/Library/Python/2.7/bin:$PATH
 
 # rvm
@@ -20,3 +20,9 @@ export PATH=~/Library/Python/2.7/bin:$PATH
 PATH=$PATH:$HOME/.rvm/bin
 
 export DEVELOPER=james
+
+PATH="/Users/jbowes/perl5/bin${PATH+:}${PATH}"; export PATH;
+PERL5LIB="/Users/jbowes/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/jbowes/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/jbowes/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/jbowes/perl5"; export PERL_MM_OPT;

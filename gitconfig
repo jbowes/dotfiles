@@ -2,9 +2,11 @@
     name = James Bowes
     email = jbowes@repl.ca
     user = jbowes
+    signingkey = 4545BCB2
 
 [core]
-    commentchar = %
+	commentchar = %
+	excludesfile = ~/.gitignore
 
 [alias]
     ci = commit -a
@@ -26,6 +28,7 @@
     krlurkers = !git rlurkers | sed "s.origin/.:." | xargs -n1 git push origin
 
     rpo = remote prune origin
+	tug = pull
 
 [apply]
     whitespace = warn
@@ -40,3 +43,6 @@
 	default = simple
 [rerere]
 	enabled = true
+
+[gpg]
+	program = gpg2
