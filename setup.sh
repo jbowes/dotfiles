@@ -12,6 +12,8 @@ ln -s ~/code/dotfiles/vimrc ~/.vimrc
 ln -s ~/code/dotfiles/ftplugin ~/.vim/ftplugin
 ln -s ~/code/dotfiles/ftdetect ~/.vim/ftdetect
 
+ln -s ~/code/dotfiles/nvim ~/.config/nvim
+
 
 # set up golang
 mkdir -p ~/.vim/syntax
