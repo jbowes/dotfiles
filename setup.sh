@@ -1,20 +1,17 @@
 #!/bin/bash
 
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
 ln -s ~/code/dotfiles/bashrc ~/.bashrc
 ln -s ~/code/dotfiles/bash_profile ~/.bash_profile
 
 ln -s ~/code/dotfiles/tigrc ~/.tigrc
 ln -s ~/code/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/code/dotfiles/vimrc ~/.vimrc
 
-ln -s ~/code/dotfiles/ftplugin ~/.vim/ftplugin
-ln -s ~/code/dotfiles/ftdetect ~/.vim/ftdetect
+mkdir -p ~/.config
 
+#neovim setup
+pip3 install --user neovim
+PLUGIN_DIR=~/.config/nvim/dein-plugins/repos/github.com
+mkdir -p $PLUGIN_DIR
+git clone https://github.com/Shougo/dein.vim $PLUGIN_DIR/Shougo/dein.vim
 ln -s ~/code/dotfiles/nvim ~/.config/nvim
 
-
-# set up golang
-mkdir -p ~/.vim/syntax
-ln -s $GOROOT/misc/vim/syntax/go.vim ~/.vim/syntax/go.vim
