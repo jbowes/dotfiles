@@ -44,5 +44,8 @@
 [rerere]
 	enabled = true
 
+[tag]
+	sort = version:refname
+
 [gpg]
 	program = gpg2

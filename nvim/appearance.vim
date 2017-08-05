@@ -8,8 +8,20 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1 " makes the background not change color
 set background=dark
 colorscheme solarized
-
+autocmd colorscheme * highlight Comment ctermfg=241
 let g:airline_solarized_normal_green = 1
+
+"colorscheme dracula
+"autocmd colorscheme * highlight Comment ctermfg=245
+"autocmd colorscheme * highlight Normal ctermbg=0
+
+"if (has("termguicolors"))
+ "set termguicolors
+"endif
+"syntax enable
+"colorscheme OceanicNext
+
+"let g:airline_theme='oceanicnext'
 
 " colorize columns past 80
 let &colorcolumn=join(range(81,999),",")

@@ -15,9 +15,12 @@ PS1='[\u@\h \W]\$ '
 export EDITOR=nvim
 export PATH=~/Library/Python/2.7/bin:$PATH
 
+export PATH=$PATH:~/.gem/ruby/2.4.0/bin
+
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 PATH=$PATH:$HOME/.rvm/bin
+PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 
 export DEVELOPER=james
 
